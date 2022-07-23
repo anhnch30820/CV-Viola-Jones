@@ -57,9 +57,15 @@ class MyTableWidget(QWidget):
         self.scaleLabelI.setGeometry(QRect(500, 130, 100, 30))
         self.sl = QSlider(Qt.Horizontal, self.tabImage)
         self.sl.setGeometry(QRect(500, 100, 150, 30))
+<<<<<<< HEAD
         self.sl.setMinimum(1001)
         self.sl.setMaximum(3000)
         self.sl.setValue(1001)
+=======
+        self.sl.setMinimum(101)
+        self.sl.setMaximum(300)
+        self.sl.setValue(101)
+>>>>>>> b6eb1ec5b0539e6f2527ef28b575686d982b6ff1
         self.sl.setTickPosition(QSlider.TicksBelow)
         self.sl.setTickInterval(5)
         self.sl.valueChanged.connect(self.valuechange1)
