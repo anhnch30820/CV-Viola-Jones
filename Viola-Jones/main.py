@@ -57,9 +57,9 @@ class MyTableWidget(QWidget):
         self.scaleLabelI.setGeometry(QRect(500, 130, 100, 30))
         self.sl = QSlider(Qt.Horizontal, self.tabImage)
         self.sl.setGeometry(QRect(500, 100, 150, 30))
-        self.sl.setMinimum(100)
-        self.sl.setMaximum(300)
-        self.sl.setValue(100)
+        self.sl.setMinimum(1001)
+        self.sl.setMaximum(3000)
+        self.sl.setValue(1001)
         self.sl.setTickPosition(QSlider.TicksBelow)
         self.sl.setTickInterval(5)
         self.sl.valueChanged.connect(self.valuechange1)
@@ -159,7 +159,7 @@ class MyTableWidget(QWidget):
 
     def valuechange1(self):
         size = self.sl.value()
-        self.l1.setText(str(size/100))
+        self.l1.setText(str(size/1000))
 
     def valuechange2(self):
         size = self.minNeighborSpinBoxI.value()
@@ -175,7 +175,7 @@ class MyTableWidget(QWidget):
 
     def detectOfImage(self):
         path = self.imagePathI.text()
-        s = self.sl.value()/100
+        s = self.sl.value()/1000
         m = self.minNeighborSpinBoxI.value()
         minSize = (self.minSizeSlide.value(), self.minSizeSlide.value())
         maxSize = (self.maxSizeSlide.value(), self.maxSizeSlide.value())
